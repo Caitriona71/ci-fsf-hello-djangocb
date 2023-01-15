@@ -25,9 +25,6 @@ if os.path.isfile('env.py'):
 
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
-
-
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
@@ -90,7 +87,10 @@ WSGI_APPLICATION = 'django_todo.wsgi.application'
 #     }
 # }
 
-os.environ.get("DATABASE_URL")
+DATABASES = {
+    'default': {dj_database_url.parse('postgres://tgirughx:4JA3blPLVhV2PTwE3GvF7R_lhtSmmIUI@mel.db.elephantsql.com/tgirughx')
+                }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
