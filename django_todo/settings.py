@@ -20,7 +20,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 import os
-if os.path.exists('env.py'):
+if os.path.isfile('env.py'):
     import env
 
 SECRET_KEY = os.environ.get('SECRET_KEY')
@@ -30,9 +30,6 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-j82i2(06libeg@ct8_q5g-az(m$)bj01w$*5n*x^2^(s1#pyx%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
